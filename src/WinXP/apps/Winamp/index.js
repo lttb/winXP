@@ -16,6 +16,8 @@ function Winamp({ onClose, onMinimize }) {
     webamp.current.renderWhenReady(target).then(() => {
       target.appendChild(document.querySelector('#webamp'));
     });
+    target.style.width = 0;
+    target.style.height = 0;
     return () => {
       webamp.current.dispose();
       webamp.current = null;
@@ -29,7 +31,13 @@ function Winamp({ onClose, onMinimize }) {
   });
   return (
     <div
-      style={{ position: 'fixed', left: 0, top: 0, right: 0, bottom: 0 }}
+      style={{
+        position: 'fixed',
+        left: 0,
+        top: 0,
+        width: '100vw',
+        height: '100vh',
+      }}
       ref={ref}
     />
   );
