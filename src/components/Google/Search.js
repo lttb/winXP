@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 
 import find from './find.svg';
 import smile from './smile.svg';
 
-function Search({ className, goMain, onSearch, query }) {
+function Search({ style, className, goMain, onSearch, query }) {
   const [value, setValue] = useState(query);
   const [tag, setTag] = useState('All');
   function onChange(e) {
@@ -29,7 +29,7 @@ function Search({ className, goMain, onSearch, query }) {
     ));
   }
   return (
-    <div className={className}>
+    <div style={style} className={className}>
       <section className="top-bars">
         <div className="top-bar">
           <div className="bar-items left">

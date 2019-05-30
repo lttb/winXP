@@ -1,7 +1,7 @@
 import React, { useRef, memo } from 'react';
 import useWindowSize from 'react-use/lib/useWindowSize';
 import { useElementResize } from 'src/hooks';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 
 import HeaderButtons from './HeaderButtons';
 
@@ -48,6 +48,7 @@ const Window = memo(function({
   zIndex,
   isFocus,
   className,
+  style,
 }) {
   function _onMouseDown() {
     onMouseDown(id);
@@ -95,6 +96,7 @@ const Window = memo(function({
       ref={ref}
       onMouseDown={_onMouseDown}
       style={{
+        ...style,
         transform: `translate(${x}px,${y}px)`,
         width: width ? `${width}px` : 'auto',
         height: height ? `${height}px` : 'auto',

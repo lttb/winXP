@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import FooterMenu from './FooterMenu';
 import Balloon from 'src/components/Balloon';
 

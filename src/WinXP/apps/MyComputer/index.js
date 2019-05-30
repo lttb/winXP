@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import ga from 'react-ga';
 
 import go from 'src/assets/windowsIcons/290.png';

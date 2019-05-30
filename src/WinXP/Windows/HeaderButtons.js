@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 
 function HeaderButtons({
+  style,
   buttons,
   onMaximize,
   onMinimize,
@@ -37,7 +38,7 @@ function HeaderButtons({
   };
 
   return (
-    <div className={className}>
+    <div style={style} className={className}>
       {buttons ? (
         buttons.map(b => buttonElements[b])
       ) : (

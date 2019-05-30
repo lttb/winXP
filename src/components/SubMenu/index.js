@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 
 function SubMenu({ className, data, style, onClick }) {
   const [hoverIndex, setHoverIndex] = useState(-1);
   return (
-    <div style={{ ...style }} className={className}>
+    <div style={style} className={className}>
       {data.map((item, index) => (
         <SubMenuItem
           onClick={onClick}

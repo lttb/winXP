@@ -1,5 +1,5 @@
 import React, { useReducer, useRef, useCallback } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from '@reshadow/styled';
 import useMouse from 'react-use/lib/useMouse';
 import ga from 'react-ga';
 
@@ -186,7 +186,7 @@ const reducer = (state, action = { type: '' }) => {
 function WinXP() {
   const [state, dispatch] = useReducer(reducer, initState);
   const ref = useRef(null);
-  const mouse = useMouse(ref);
+  const mouse = {} || useMouse(ref);
   const focusedAppId = getFocusedAppId();
   const onFocusApp = useCallback(
     id => {

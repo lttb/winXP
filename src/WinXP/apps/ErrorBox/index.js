@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import errorSoundSrc from 'src/assets/sounds/error.wav';
 import error from 'src/assets/windowsIcons/897(32x32).png';
 

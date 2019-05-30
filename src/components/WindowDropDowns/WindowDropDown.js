@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import iePaper from 'src/assets/windowsIcons/ie-paper.png';
 import ieBook from 'src/assets/windowsIcons/ie-book.png';
 import check from 'src/assets/windowsIcons/checked.png';

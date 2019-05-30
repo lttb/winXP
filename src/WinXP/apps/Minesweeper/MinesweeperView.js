@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 
 import { WindowDropDowns } from 'src/components';
 import dropDownData from './dropDownData';
@@ -97,6 +97,7 @@ function MineSweeperView({
   difficulty,
   openingCeil,
   openingCeils,
+  style,
 }) {
   const face = useRef(null);
   const [mouseDownContent, setMouseDownContent] = useState(false);
@@ -211,7 +212,7 @@ function MineSweeperView({
     };
   }, []);
   return (
-    <div className={className} onContextMenu={e => e.preventDefault()}>
+    <div style={style} className={className} onContextMenu={e => e.preventDefault()}>
       <div className="mine__options">
         <WindowDropDowns
           items={genDropDownData(difficulty)}

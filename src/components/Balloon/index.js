@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from '@reshadow/styled';
 import risk from 'src/assets/windowsIcons/229(16x16).png';
 function Balloon({ startAfter = 3000, duration = 15000 }) {
   const [show, setShow] = useState(true);
@@ -40,7 +40,7 @@ function Balloon({ startAfter = 3000, duration = 15000 }) {
   );
 }
 const fadein = keyframes`
-  0% { 
+  0% {
     display: block;
     opacity: 0;
   }
@@ -50,7 +50,7 @@ const fadein = keyframes`
   }
 `;
 const fadeout = keyframes`
-  0% { 
+  0% {
     display: block;
     opacity: 1;
   }

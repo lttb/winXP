@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import WindowDropDown from './WindowDropDown';
 
 export function WindowDropDowns({
   items,
   onClickItem,
   className,
+  style,
   height = 20,
 }) {
   const dropDown = useRef(null);
@@ -27,7 +28,7 @@ export function WindowDropDowns({
     };
   }, []);
   return (
-    <div className={className} ref={dropDown}>
+    <div style={style} className={className} ref={dropDown}>
       {Object.keys(items).map(name => (
         <div className="drop-down" key={name}>
           <div

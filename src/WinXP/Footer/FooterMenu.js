@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import ie from 'src/assets/windowsIcons/ie.png';
 import mine from 'src/assets/minesweeper/mine-icon.png';
 import setAccess from 'src/assets/windowsIcons/227(32x32).png';
@@ -31,7 +31,7 @@ import SubMenu from 'src/components/SubMenu';
 
 import { AllPrograms, ConnectTo, MyRecentDocuments } from './FooterMenuData';
 
-function FooterMenu({ className, onClick }) {
+function FooterMenu({ style, className, onClick }) {
   const [hovering, setHovering] = useState('');
   function onMouseOver(e) {
     const item = e.target.closest('.menu__item');
@@ -39,7 +39,7 @@ function FooterMenu({ className, onClick }) {
     setHovering(item.querySelector('.menu__item__text').textContent);
   }
   return (
-    <div className={className}>
+    <div style={style} className={className}>
       <header>
         <img className="header__img" src={user} alt="avatar" />
         <span className="header__text">User</span>

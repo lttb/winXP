@@ -1,6 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 
 import { POWER_STATE } from 'src/WinXP/constants';
 
@@ -19,13 +19,14 @@ function Modal(props) {
   );
 }
 
-const Container = ({ className, children }) => {
+const Container = ({ style, className, children }) => {
   function noop(e) {
     e.preventDefault();
     e.stopPropagation();
   }
   return (
     <div
+      style={style}
       className={className}
       onMouseMove={noop}
       onClick={noop}

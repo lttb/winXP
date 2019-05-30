@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 
 function Icons({
   icons,
@@ -51,6 +51,7 @@ function Icon({
   onDoubleClick,
   icon,
   className,
+  style,
   id,
   component,
   measure,
@@ -72,6 +73,7 @@ function Icon({
   }, []);
   return (
     <div
+      style={style}
       className={className}
       onMouseDown={_onMouseDown}
       onDoubleClick={_onDoubleClick}

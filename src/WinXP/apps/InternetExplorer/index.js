@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import ie from 'src/assets/windowsIcons/ie-paper.png';
 import printer from 'src/assets/windowsIcons/17(32x32).png';
 import go from 'src/assets/windowsIcons/290.png';

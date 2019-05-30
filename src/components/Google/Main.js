@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@reshadow/styled';
 import smile from './smile.svg';
 
-function Main({ onSearch, className }) {
+function Main({ onSearch, style, className }) {
   const [value, setValue] = useState('');
   function onChange(e) {
     setValue(e.target.value);
@@ -15,7 +15,7 @@ function Main({ onSearch, className }) {
     onSearch(value);
   }
   return (
-    <div className={className}>
+    <div style={style} className={className}>
       <header>
         <div className="text">Gmail</div>
         <div className="text">Images</div>
