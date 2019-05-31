@@ -6,6 +6,7 @@
   "homepage": "https://winxp.now.sh",
   "dependencies": {
     "lodash.samplesize": "^4.2.0",
+    "randomcolor": "^0.5.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",
