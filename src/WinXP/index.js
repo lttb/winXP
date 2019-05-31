@@ -25,6 +25,8 @@ import Windows from './Windows';
 import Icons from './Icons';
 import { DashedBox } from 'src/components';
 
+import DeadErrors from './DeadErrors'
+
 const initState = {
   apps: defaultAppState,
   nextAppID: defaultAppState.length,
@@ -299,6 +301,7 @@ function WinXP() {
       onMouseDown={onMouseDownDesktop}
       state={state.powerState}
     >
+      <DeadErrors />
       <Icons
         icons={state.icons}
         onMouseDown={onMouseDownIcon}

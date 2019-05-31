@@ -7,6 +7,7 @@
   "dependencies": {
     "@reshadow/styled": "^0.0.1-alpha.48",
     "lodash.samplesize": "^4.2.0",
+    "randomcolor": "^0.5.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",

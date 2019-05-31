@@ -11,7 +11,7 @@ function lineBreak(str) {
   ));
 }
 
-function Error({ onClose, message = "Something's wrong!" }) {
+function Error({ onClose, message = "Something's wrong!", ...props }) {
   useEffect(() => {
     try {
       new Audio(errorSoundSrc).play();
@@ -20,7 +20,7 @@ function Error({ onClose, message = "Something's wrong!" }) {
     }
   }, []);
   return (
-    <Div>
+    <Div {...props}>
       <div className="error__top">
         <img src={error} alt="error" className="error__img" />
         <div className="error__messages">{lineBreak(message)}</div>
@@ -69,6 +69,7 @@ const Div = styled.div`
     justify-content: center;
     align-items: center;
     box-shadow: inset -1px -1px 1px black;
+    background: ${props => props.color || 'inherit'};
     &:hover:active {
       box-shadow: inset 1px 1px 1px black;
       & > * {
